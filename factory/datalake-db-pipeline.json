@@ -1,0 +1,9 @@
+{
+	"name": "datalake-db-pipeline",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b633e26d-8c71-41f2-ae04-b8b67856e493",
+		"tenantId": "65aab908-34d6-4e76-b746-89c3673258cb"
+	}
+}
