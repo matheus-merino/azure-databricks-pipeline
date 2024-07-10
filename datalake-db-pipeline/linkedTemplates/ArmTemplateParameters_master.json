@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datalake-db-pipeline"
+		},
+		"databricks_datafactory_link_accessToken": {
+			"value": ""
+		},
+		"databricks_datafactory_link_properties_typeProperties_existingClusterId": {
+			"value": "0709-193633-jpgl5uff"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
