@@ -1,6 +1,41 @@
 {
 	"name": "datalake-ingestion",
 	"properties": {
+		"activities": [
+			{
+				"name": "bronze-layer-ingestion",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			},
+			{
+				"name": "silver-layer-ingestion",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "bronze-layer-ingestion",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			}
+		],
 		"annotations": []
 	}
 }
